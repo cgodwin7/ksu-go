@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.group5.ksugo.test" >
+    package="sqlinjection.sqliexample.ksugo.test" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -10,8 +10,8 @@
         android:name="android.support.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.group5.ksugo"
-        android:targetPackage="com.group5.ksugo" />
+        android:label="Tests for sqlinjection.sqliexample.ksugo"
+        android:targetPackage="sqlinjection.sqliexample.ksugo" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />

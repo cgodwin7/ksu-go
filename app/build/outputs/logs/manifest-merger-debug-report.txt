@@ -23,7 +23,7 @@ INJECTED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/A
 INJECTED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:3:5-31
+		ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -83,9 +83,15 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/Albert/.gradle/caches/
 	android:allowBackup
 		ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
+<<<<<<< HEAD
 		ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:13:9-40
 activity#com.group5.ksugo.MainActivity
 ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:14:9-23:20
+=======
+		ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:11:9-40
+activity#sqlinjection.sqliexample.ksugo.MainActivity
+ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:12:9-21:20
+>>>>>>> parent of 94df682... Initial App
 	android:label
 		ADDED from /Users/Albert/Documents/AndroidStudioProjects/KSUGO/app/src/main/AndroidManifest.xml:16:13-45
 	android:theme

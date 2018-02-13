@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"outputType":{"type":"MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"AndroidManifest.xml","properties":{"packageId":"com.group5.ksugo","split":"","minSdkVersion":"21"}}]
+=======
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"AndroidManifest.xml","properties":{"packageId":"sqlinjection.sqliexample.ksugo","split":"","minSdkVersion":"27"}}]
+>>>>>>> parent of 94df682... Initial App
