@@ -1,5 +1,7 @@
 package com.group5.ksugo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button b, c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,16 +23,30 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        b=findViewById(R.id.call1);
+
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v){
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:470-578-6666"));
+                startActivity(callIntent);
             }
         });
-    }
 
+        c=findViewById(R.id.call2);
+
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:470-578-6206"));
+                startActivity(callIntent);
+            }
+        });
+
+    }
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -48,5 +67,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
+
+
 }
+
+
