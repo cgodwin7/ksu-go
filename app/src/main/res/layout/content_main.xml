@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.group5.ksugo.MainActivity"
+    tools:context="com.group5.ksugo.EmergencyActivity"
     tools:showIn="@layout/activity_main">
 
     <!--
@@ -23,21 +23,28 @@
         app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
-        android:id="@+id/call1"
+        android:id="@+id/emergencyCall"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Make Emergencies Call"
+        android:layout_marginTop="30dp"
         android:textStyle="bold"
+        android:background="@color/red"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fab_margin"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/call2"
+        android:id="@+id/nonEmergencyCall"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="Make Non-Emergencies Call"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="100dp"
+        android:background="@color/yellow"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fab_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -26,9 +26,9 @@ public final class R {
         public static final int notification_icon_bg_color = 0x7f05004a;
         public static final int notification_material_background_media_default_color = 0x7f05004b;
         public static final int primary_text_default_material_dark = 0x7f050050;
-        public static final int ripple_material_light = 0x7f050055;
-        public static final int secondary_text_default_material_dark = 0x7f050056;
-        public static final int secondary_text_default_material_light = 0x7f050057;
+        public static final int ripple_material_light = 0x7f050056;
+        public static final int secondary_text_default_material_dark = 0x7f050057;
+        public static final int secondary_text_default_material_light = 0x7f050058;
     }
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 0x7f06004a;
@@ -75,17 +75,17 @@ public final class R {
         public static final int actions = 0x7f080019;
         public static final int async = 0x7f080021;
         public static final int blocking = 0x7f080025;
-        public static final int cancel_action = 0x7f08002a;
-        public static final int chronometer = 0x7f080030;
-        public static final int end_padder = 0x7f080043;
-        public static final int forever = 0x7f08004d;
-        public static final int icon = 0x7f080052;
-        public static final int icon_group = 0x7f080053;
-        public static final int info = 0x7f080056;
-        public static final int italic = 0x7f080057;
-        public static final int line1 = 0x7f08005b;
-        public static final int line3 = 0x7f08005c;
-        public static final int media_actions = 0x7f080060;
+        public static final int cancel_action = 0x7f080028;
+        public static final int chronometer = 0x7f08002e;
+        public static final int end_padder = 0x7f080042;
+        public static final int forever = 0x7f08004c;
+        public static final int icon = 0x7f080051;
+        public static final int icon_group = 0x7f080052;
+        public static final int info = 0x7f080055;
+        public static final int italic = 0x7f080056;
+        public static final int line1 = 0x7f08005a;
+        public static final int line3 = 0x7f08005b;
+        public static final int media_actions = 0x7f08005f;
         public static final int normal = 0x7f080068;
         public static final int notification_background = 0x7f080069;
         public static final int notification_main_column = 0x7f08006a;

@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.*;
 
-public class MainActivity extends AppCompatActivity {
+public class EmergencyActivity extends AppCompatActivity {
 
     Button b, c;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        b=findViewById(R.id.call1);
+        b=findViewById(R.id.emergencyCall);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        c=findViewById(R.id.call2);
+        c=findViewById(R.id.nonEmergencyCall);
 
         c.setOnClickListener(new View.OnClickListener() {
             @Override
