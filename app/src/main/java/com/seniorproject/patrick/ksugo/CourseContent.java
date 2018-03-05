@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,8 @@ private ArrayList<Button>module=new ArrayList<Button>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_content);
+       TextView textView=(TextView) findViewById(R.id.courseContentText);
+        textView.setText(String.format("%s Content", D2L.selectedCourse));
     }
 
 

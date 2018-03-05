@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInteractionListener,AssignmentsFrag.OnFragmentInteractionListener,
@@ -36,8 +37,10 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
     private Button grades;
     private Button discussions;
     private Button annoucements;
+    private int Student=000111222333;
     public static ArrayList<Course> courses1=new ArrayList<Course>();
     public static String selectedCourse;
+    public static ArrayList<Grades> allGrades=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +52,8 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
         final FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
-
         insertCourses();
-
+        addGrades();
         viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -79,28 +81,34 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
 
     }
     public void onClick(View view){
+        TextView textView;
 
 
         switch (view.getId()){
             case R.id.annoucementButton:{
+
                 startActivity(new Intent(D2L.this, CourseAnnouncements.class));
                 break;
             }
             case R.id.assignmentsButton:{
+
                 startActivity(new Intent(D2L.this, CourseAssignments.class));
 
                 break;
             }
             case R.id.contentButton:{
+
                 startActivity(new Intent(D2L.this, CourseContent.class));
 
                 break;
             }
             case R.id.discussionsButton:{
+
                 startActivity(new Intent(D2L.this, CourseDiscussion.class));
                 break;
             }
             case R.id.gradesButton:{
+
                 startActivity(new Intent(D2L.this, CourseGrades.class));
                 break;
             }
@@ -133,7 +141,7 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
           assignment5.setAssignmentName("Essay");
           assignment5.setDueDate("March 25th");
           assignment5.setDueTime("11:59pm");
-      assignment5.setAssignmentName("SDD");
+         assignment5.setAssignmentName("SDD");
       assignment5.setDueDate("Feb 22");
       assignment5.setDueTime("11:59pm");
         Course chemistry=new Course();
@@ -157,6 +165,41 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
 
   }
 
+public void addGrades(){
+      Grades grade= new Grades(92,"Assignment 1",000111222333,"chem1211");
+      Grades grade1= new Grades(80,"Assignment 2",000111222333,"chem1211");
+      Grades grade2= new Grades(100,"Assignment 3",000111222333,"chem1211");
+      Grades grade3= new Grades(100,"Quiz 1",000111222333,"chem1211");
+      Grades grade4= new Grades(85,"Quiz 2",000111222333,"chem1211");
+      Grades grade5= new Grades(94,"In-Class Assignment 1 ",000111222333,"cs4720");
+      Grades grade6= new Grades(92,"Mid-Term",000111222333,"cs4720");
+      Grades grade7= new Grades(100,"SRS",000111222333,"cs4850");
+      Grades grade8= new Grades(86,"Assignment 1",000111222333,"cs4720");
+      Grades grade9= new Grades(85,"Test 1",000111222333,"cs4720");
+      Grades grade10= new Grades(93,"Quiz 2",000111222333,"cs4720");
+      Grades grade11= new Grades(79,"Essay",000111222333,"chem1211");
+      Grades grade12= new Grades(85,"Weekly Report 1",000111222333,"cs4850");
+      Grades grade13= new Grades(75,"Weekly Report 2",000111222333,"cs4850");
+      Grades grade14= new Grades(80,"Weekly Report 3",000111222333,"cs4850");
+      Grades grade15= new Grades(95,"Weekly Report 4",000111222333,"cs4850");
+      allGrades.add(grade);
+      allGrades.add(grade1);
+      allGrades.add(grade2);
+      allGrades.add(grade3);
+      allGrades.add(grade4);
+      allGrades.add(grade5);
+      allGrades.add(grade6);
+      allGrades.add(grade7);
+      allGrades.add(grade8);
+      allGrades.add(grade9);
+      allGrades.add(grade10);
+      allGrades.add(grade11);
+      allGrades.add(grade12);
+      allGrades.add(grade13);
+      allGrades.add(grade14);
+      allGrades.add(grade15);
+
+}
 
 
 }

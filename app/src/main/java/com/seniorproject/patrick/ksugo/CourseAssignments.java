@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,7 +20,9 @@ public class CourseAssignments extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_assignments);
 
-        addAssignment();
+       TextView textView=(TextView) findViewById(R.id.courAssignText);
+        textView.setText(String.format("%s Assignments", D2L.selectedCourse));
+        addAssignmentTable();
 
     }
 
@@ -28,43 +33,72 @@ public class CourseAssignments extends AppCompatActivity {
 //        startActivity(new Intent(CourseAssignments.this,D2L.class));
 
     }
-    public void addAssignment() {
-        ArrayList<Course> courses = D2L.courses1;
+
+    public void addAssignmentTable(){
+      ArrayList<Course> courses = D2L.courses1;
         Course selectedCourse= new Course();
         for (Course course : courses) {
             if (course.getCourseName() == D2L.selectedCourse) {
                 selectedCourse = course;
             }
         }
-        ArrayList<String>assignmentInfo=new ArrayList<>();
-        ArrayList<Assignments> assignmentsList=selectedCourse.getAssignments();
 
-        if (selectedCourse.getAssignments().size()>0) {
-            String string;
+        TableLayout assignmentsTable=(TableLayout) findViewById(R.id.courseAssignmentTable);
+            for (int j=0;j<selectedCourse.getAssignments().size();j++){
+                TableRow row= new TableRow(getApplicationContext());
+                row.setBackgroundColor(getResources().getColor(R.color.rowBackground));
 
-            for(int i=0;i<assignmentsList.size();i++){
-                if(i==0){
-                    assignmentInfo.add(assignmentsList.get(i).getDueDate());
-                    string=assignmentsList.get(i).toString();
-                    assignmentInfo.add(string);
+                TextView assignmentName=new TextView(getApplicationContext());
+                TextView timeDue=new TextView(getApplicationContext());
+                TextView dueDate=new TextView(getApplicationContext());
+                assignmentName.setTextColor(getResources().getColor(R.color.black));
+                timeDue.setTextColor(getResources().getColor(R.color.black));
+                dueDate.setTextColor(getResources().getColor(R.color.black));
+                timeDue.setTextColor(getResources().getColor(R.color.black));
+                if(j==0){
+                    TableRow row2= new TableRow(getApplicationContext());
+                    dueDate.setText(selectedCourse.getAssignments().get(j).getDueDate());
+                    row.addView(dueDate);
+
+                    assignmentName.setText(selectedCourse.getAssignments().get(j).getAssignmentName()+" ");
+                    timeDue.setText(selectedCourse.getAssignments().get(j).getDueTime());
+
+                    row2.addView(assignmentName);
+                    row2.addView(timeDue);
+                    assignmentsTable.addView(row);
+                    assignmentsTable.addView(row2);
+
                 }
-                else if(assignmentsList.get(i).getDueDate()==assignmentsList.get(i-1).getDueDate()){
-                    assignmentInfo.add(assignmentsList.get(i).toString());
+                else if(selectedCourse.getAssignments().get(j).getDueDate()==selectedCourse.getAssignments().get(j-1).getDueDate()){
+                    assignmentName.setText(selectedCourse.getAssignments().get(j).getAssignmentName()+" | ");
+                    timeDue.setText(selectedCourse.getAssignments().get(j).getDueTime());
+
+
+                    row.addView(assignmentName);
+                    row.addView(timeDue);
+                    assignmentsTable.addView(row);
+
+
                 }
                 else {
-                    assignmentInfo.add(assignmentsList.get(i).getDueDate());
-                    string=assignmentsList.get(i).toString();
-                    assignmentInfo.add(string);
+                    TableRow row2= new TableRow(getApplicationContext());
+                    dueDate.setText(selectedCourse.getAssignments().get(j).getDueDate());
+                    row.addView(dueDate);
+
+                    assignmentName.setText(selectedCourse.getAssignments().get(j).getAssignmentName());
+                    timeDue.setText(selectedCourse.getAssignments().get(j).getDueTime());
+
+                    row2.addView(assignmentName);
+                    row2.addView(timeDue);
+
+                    assignmentsTable.addView(row);
+                    assignmentsTable.addView(row2);
+
 
                 }
-            }
-            }
-            ListAdapter adapter = new ArrayAdapter<String>(this, R.layout.assignment_layoutfile, R.id.textviewLayout, assignmentInfo);
-            ListView listView = (ListView) findViewById(R.id.courseAssignementView);
 
-            listView.setAdapter(adapter);
-        }
-
+            }
     }
+}
 
 
