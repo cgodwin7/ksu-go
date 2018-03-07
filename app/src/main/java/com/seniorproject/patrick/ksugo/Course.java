@@ -13,12 +13,16 @@ public class Course {
     private String courseSectionNumber;
     private String professorName;
     private ArrayList<String> studentList=new ArrayList<String>();
-    private ArrayList<String> announcemnts= new ArrayList<String>();
+    private ArrayList<Annoucements> announcemnts= new ArrayList<>();
     public Course(){
         courseName=null;
         courseSectionNumber=null;
         professorName=null;
 
+    }
+
+    public ArrayList<Annoucements> getAnnouncemnts() {
+        return announcemnts;
     }
 
     public Course(String courseID, String courseName, String courseSectionNumber, String professorName) {
@@ -41,7 +45,7 @@ public class Course {
     public void addAssignment(Assignments assignment){
         assignments.add(assignment);
     }
-    public void addAnnoucements(String annoucement){
+    public void addAnnoucements(Annoucements annoucement){
         announcemnts.add(annoucement);
     }
     public ArrayList<Assignments> getAssignments() {
@@ -51,6 +55,11 @@ public class Course {
     public void setAssignments(ArrayList<Assignments> assignments) {
         this.assignments = assignments;
     }
+
+    public void setAnnouncemnts(ArrayList<Annoucements> announcemnts) {
+        this.announcemnts = announcemnts;
+    }
+
     public void deleteAnnoucement(int annoucementIndex){
         announcemnts.remove(annoucementIndex);
     }

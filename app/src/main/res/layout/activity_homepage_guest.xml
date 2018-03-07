@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seniorproject.patrick.ksugo.HomepageStudentTeacher">
+
+    <ImageButton
+        android:id="@+id/BOBButton"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/CampusMap"
+        app:layout_constraintEnd_toStartOf="@+id/NewsButton"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966"
+        app:srcCompat="@drawable/button" />
+
+    <ImageButton
+        android:id="@+id/NewsButton"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/ContactDirectoryButton"
+        app:layout_constraintEnd_toStartOf="@+id/EventsButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/button" />
+
+    <ImageButton
+        android:id="@+id/EventsButton"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/EmergencyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966"
+        app:srcCompat="@drawable/button" />
+
+    <ImageButton
+        android:id="@+id/CampusMap"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="332dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ContactDirectoryButton"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button" />
+
+    <ImageButton
+        android:id="@+id/ContactDirectoryButton"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/EmergencyButton"
+        app:srcCompat="@drawable/button"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <ImageButton
+        android:id="@+id/EmergencyButton"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="332dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/button" />
+
+    <ImageButton
+        android:id="@+id/LogoutButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ContactDirectoryButton"
+        app:layout_constraintVertical_bias="0.178"
+        app:srcCompat="@drawable/button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="398dp"
+        android:layout_height="162dp"
+        app:srcCompat="@drawable/kennesaw_state_univ_logo"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="474dp" />
+
+</android.support.constraint.ConstraintLayout>

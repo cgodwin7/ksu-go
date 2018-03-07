@@ -10,10 +10,30 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        <android.support.v7.widget.Toolbar
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp"
-            app:layout_scrollFlags="scroll|enterAlways"></android.support.v7.widget.Toolbar>
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/d2LHome"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="71dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:onClick="home"
+                android:text="Home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </android.support.constraint.ConstraintLayout>
+
 
         <android.support.design.widget.TabLayout
             android:id="@+id/all_tabs"
@@ -26,7 +46,8 @@
                 android:id="@+id/news"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="News" />
+                android:text="News"
+                />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/assignments"

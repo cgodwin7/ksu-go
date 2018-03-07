@@ -15,6 +15,10 @@ public class Annoucements {
         this.date = date;
     }
 
+    public Annoucements(String annoucementName){
+        this.annoucementName=annoucementName;
+    }
+    public Annoucements(){}
     public String getAnnoucementName() {
         return annoucementName;
     }

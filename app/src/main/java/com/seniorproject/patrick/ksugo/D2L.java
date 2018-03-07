@@ -52,8 +52,8 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
         final FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
-        insertCourses();
-        addGrades();
+       if(courses1.isEmpty()){ insertCourses();}
+       if(allGrades.isEmpty()){ addGrades();}
         viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -73,6 +73,9 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
 
 
 
+    }
+    public void home(View view){
+        finish();
     }
 
 
@@ -158,6 +161,21 @@ public class D2L extends AppCompatActivity implements CoursesFrag.OnFragmentInte
         chemistry.addAssignment(assignment3);
         internetProgramming.addAssignment(assignment4);
         seniorProject.addAssignment(assignment5);
+
+        Annoucements annoucement=new Annoucements("Class is canceled today");
+        Annoucements annoucement1=new Annoucements("Study guide will be up this weekend");
+        Annoucements annoucement2=new Annoucements("Grades are up for test 1. Most of you did well.");
+        Annoucements annoucement3=new Annoucements("Whoever left his/hers phone, you have a cut dog. Please pick up your phone by the end of the week. Or your dog is mine");
+        Annoucements annoucement4=new Annoucements("Quiz 1 is ending soon. For those of you who haven't taken please do.");
+        Annoucements annoucement5=new Annoucements("Presentation next week. Be prepared to have a working prototype");
+
+        chemistry.addAnnoucements(annoucement);
+        seniorProject.addAnnoucements(annoucement5);
+        internetProgramming.addAnnoucements(annoucement3);
+        internetProgramming.addAnnoucements(annoucement4);
+        chemistry.addAnnoucements(annoucement2);
+        chemistry.addAnnoucements(annoucement1);
+
         courses1.add(chemistry);
         courses1.add(internetProgramming);
         courses1.add(seniorProject);
