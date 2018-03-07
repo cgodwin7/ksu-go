@@ -23,7 +23,7 @@ public class EmergencyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
-       
+
 
         b = findViewById(R.id.emergencyCall);
 
@@ -91,6 +91,9 @@ public class EmergencyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }*/
 
+    public void home(View view){
+        finish();
+    }
 
 }
 
