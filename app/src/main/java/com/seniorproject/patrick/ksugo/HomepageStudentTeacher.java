@@ -1,6 +1,7 @@
 package com.seniorproject.patrick.ksugo;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +34,8 @@ public class HomepageStudentTeacher extends AppCompatActivity {
         News = (ImageButton) findViewById(R.id.NewsButton);
         Events = (ImageButton) findViewById(R.id.EventsButton);
         Logout = (ImageButton) findViewById(R.id.LogoutButton);*/
-        Emergency = (ImageButton) findViewById(R.id.emergency);
+        Emergency = (ImageButton) findViewById(R.id.emergencyButton);
+        ContactDirectory = (ImageButton) findViewById(R.id.directoryButton);
 
 
         //Still Need to implement these.
@@ -50,6 +52,13 @@ public class HomepageStudentTeacher extends AppCompatActivity {
                 startActivity(new Intent(HomepageStudentTeacher.this, EmergencyActivity.class));
             }
         }); //Need a method to get User Type.
+
+        ContactDirectory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomepageStudentTeacher.this, Directory.class));
+            }
+        });
 
 
       /*  Handshake.setOnClickListener(new View.OnClickListener() {

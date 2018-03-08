@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seniorproject.patrick.ksugo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
@@ -19,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CourseContent"></activity>
+
+        <activity android:name=".CourseContent"/>
         <activity android:name=".CourseAnnouncements" />
         <activity android:name=".CourseAssignments" />
         <activity android:name=".CourseDiscussion" />
@@ -28,6 +30,7 @@
         <activity android:name=".D2L" />
         <activity android:name=".HomepageGuest" />
         <activity android:name=".EmergencyActivity" />
+        <activity android:name=".Directory"/>
     </application>
 
 </manifest>
