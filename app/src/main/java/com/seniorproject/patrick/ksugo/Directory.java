@@ -42,6 +42,11 @@ public class Directory extends AppCompatActivity {
         }
     }
 
+    public void directoryHome(View view){
+        finish();
+    }
+
+
 }
 
 
