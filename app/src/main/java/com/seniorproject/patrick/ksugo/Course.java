@@ -37,21 +37,21 @@ public class Course {
     public String getCourseID() {
         return courseID;
     }
-
     public void setCourseID(String courseID) {
         this.courseID = courseID;
     }
-
     public void addAssignment(Assignments assignment){
         assignments.add(assignment);
     }
+    public void addAnnouncement(int index,Annoucements annoucement){
+        announcemnts.add(index,annoucement);
+    }
     public void addAnnoucements(Annoucements annoucement){
-        announcemnts.add(annoucement);
+        announcemnts.add(0,annoucement);
     }
     public ArrayList<Assignments> getAssignments() {
         return assignments;
     }
-
     public void setAssignments(ArrayList<Assignments> assignments) {
         this.assignments = assignments;
     }

@@ -15,6 +15,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 
@@ -158,7 +159,7 @@ public class AssignmentsFrag extends Fragment {
                 courseName.setTextColor(getResources().getColor(R.color.black));
                 if(j==0){
                     TableRow row2= new TableRow(getActivity().getApplicationContext());
-                    dueDate.setText(courses.get(i).getAssignments().get(j).getDueDate());
+                    dueDate.setText(courses.get(i).getAssignments().get(j).dateToString());
                     row.addView(dueDate);
 
                     courseName.setText(courses.get(i).getCourseName()+" ");
@@ -183,11 +184,10 @@ public class AssignmentsFrag extends Fragment {
                     row.addView(timeDue);
                     assignmentsTable.addView(row);
 
-
                 }
                 else {
                     TableRow row2= new TableRow(getActivity().getApplicationContext());
-                    dueDate.setText(courses.get(i).getAssignments().get(j).getDueDate());
+                    dueDate.setText(courses.get(i).getAssignments().get(j).dateToString());
                     row.addView(dueDate);
 
                     courseName.setText(courses.get(i).getCourseName());
