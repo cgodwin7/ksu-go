@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seniorproject.patrick.ksugo.HomepageStudentTeacher"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageButton
+        android:id="@+id/D2LButton"
+<<<<<<< HEAD
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+=======
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="30dp"
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/emergencyButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d2l" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+<<<<<<< HEAD
+        android:layout_width="390dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+=======
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/kennesaw_state_univ_logo" />
+
+    <ImageButton
+        android:id="@+id/emergencyButton"
+<<<<<<< HEAD
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/white"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toStartOf="@+id/D2LButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+=======
+        android:layout_width="91dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/white"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+        app:srcCompat="@drawable/emergency" />
+
+    <ImageButton
+        android:id="@+id/directoryButton"
+<<<<<<< HEAD
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/directory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_chainStyle="spread"
+=======
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="23dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/directory"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emergencyButton" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="36dp"
+<<<<<<< HEAD
+        android:layout_marginEnd="110dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="8dp"
+=======
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="23dp"
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/directoryButton"
+        app:layout_constraintTop_toBottomOf="@+id/D2LButton"
+        app:srcCompat="@drawable/handshake" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+<<<<<<< HEAD
+        android:layout_width="310dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="350dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/owl_life" />
+
+    <ImageButton
+        android:id="@+id/newsfeedButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+=======
+        android:layout_width="249dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
+        app:layout_constraintTop_toBottomOf="@+id/directoryButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/newsfeed" />
+=======
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/owl_life" />
+>>>>>>> 8636a8f7db5efc529546993c5f9e53a9c2adc0ce
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/D2LButton"
+        app:layout_constraintStart_toEndOf="@+id/emergencyButton"
+        app:layout_constraintTop_toBottomOf="@+id/emergencyButton"
+        app:srcCompat="@drawable/newsfeed" />
+
+</android.support.constraint.ConstraintLayout>
