@@ -31,6 +31,7 @@
         <activity android:name=".HomepageGuest" />
         <activity android:name=".EmergencyActivity" />
         <activity android:name=".Directory"/>
+        <activity android:name=".NewsFeed"/>
     </application>
 
 </manifest>

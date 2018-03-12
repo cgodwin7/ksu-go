@@ -19,6 +19,7 @@ public class HomepageStudentTeacher extends AppCompatActivity {
     private ImageButton Events;
     private ImageButton Logout;
     private ImageButton Emergency;
+    private ImageButton NewsFeed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class HomepageStudentTeacher extends AppCompatActivity {
         Logout = (ImageButton) findViewById(R.id.LogoutButton);*/
         Emergency = (ImageButton) findViewById(R.id.emergencyButton);
         ContactDirectory = (ImageButton) findViewById(R.id.directoryButton);
+        NewsFeed = (ImageButton) findViewById(R.id.newsfeedButton);
 
 
         //Still Need to implement these.
@@ -57,6 +59,13 @@ public class HomepageStudentTeacher extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomepageStudentTeacher.this, Directory.class));
+            }
+        });
+
+        NewsFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomepageStudentTeacher.this, NewsFeed.class));
             }
         });
 
