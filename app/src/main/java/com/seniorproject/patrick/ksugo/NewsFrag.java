@@ -35,13 +35,11 @@ public class NewsFrag extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private TextView studentName;
-   // private TableLayout tableLayout;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-   //private TextView student_name;
     private OnFragmentInteractionListener mListener;
 
     public NewsFrag() {
@@ -86,7 +84,7 @@ public class NewsFrag extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.news_tab, container, false);
         studentName=(TextView)view.findViewById(R.id.student_name);
-        studentName.setText(D2L.member.getName());
+        studentName.setText("Welcome "+D2L.member.getName());
         addAnnouncements(view);
         return view;
     }
@@ -136,32 +134,36 @@ public class NewsFrag extends Fragment {
         announcementsTable.setColumnShrinkable(0,true);
         int counter=0;
         for (int i = 0; i < courses.size(); i++) {
+            if (courses.get(i).getAnnouncemnts().size() > 0) {
+                TableRow courseNameRow = new TableRow(getActivity().getApplicationContext());
+                TextView courseName = new TextView((getActivity().getApplicationContext()));
+                courseName.setTextColor(getResources().getColor(R.color.black));
+                courseName.setText(courses.get(i).getCourseName());
+                courseNameRow.setBackgroundColor(getContext().getResources().getColor(R.color.rowBackground));
+                courseNameRow.addView(courseName);
+                announcementsTable.addView(courseNameRow);
 
-            for (int j = 0; j < courses.get(i).getAnnouncemnts().size(); j++) {
-                TableRow row = new TableRow(getActivity().getApplicationContext());
-                TextView announcement = new TextView(getActivity().getApplicationContext());
-                TextView date = new TextView(getActivity().getApplicationContext());
-                date.setTextColor(getResources().getColor(R.color.black));
-                announcement.setTextColor(getResources().getColor(R.color.black));
-                if(courses.get(i).getAnnouncemnts().size()!=0){
-                    TableRow row2= new TableRow(getActivity().getApplicationContext());
-                    announcement.setText(courses.get(i).getAnnouncemnts().get(j).getAnnoucementName());
-                    if(counter%2==0){
-                        row.setBackgroundColor(getContext().getResources().getColor(R.color.rowBackground));
-                    }
-                    else{
-                        row.setBackgroundColor(getContext().getResources().getColor(R.color.white));
-                    }
-                    row.addView(announcement);
+                for (int j = 0; j < courses.get(i).getAnnouncemnts().size(); j++) {
+                    TableRow row = new TableRow(getActivity().getApplicationContext());
+                    TextView announcement = new TextView(getActivity().getApplicationContext());
+                    TextView date = new TextView(getActivity().getApplicationContext());
+                    date.setTextColor(getResources().getColor(R.color.black));
+                    announcement.setTextColor(getResources().getColor(R.color.black));
+                        TableRow row2 = new TableRow(getActivity().getApplicationContext());
+                        announcement.setText(courses.get(i).getAnnouncemnts().get(j).getAnnoucementName());
+                            row.setBackgroundColor(getContext().getResources().getColor(R.color.white));
 
-                    announcementsTable.addView(row);
-                    counter++;
+                        row.addView(announcement);
+
+                        announcementsTable.addView(row);
+                        counter++;
+
+                    }
 
                 }
 
             }
-
         }
     }
 
-}
+
